@@ -98,4 +98,27 @@ em : depends on the font size of element and if given to parent is applied on ch
  background-color : red;
 }
 Here a box of 32px is created if we increase font-size to 20 , div size incerases to 40px.
+rem : relative to size of html tag , stands for root-em.
+html{
+font-size : 16px;
+}
+takes it paramters from html directory/root html tag.
+hence here , 2rem will be 32px;
+---------------------------------------------------------------------------------------------------
+Minimum and Maximum height and width :
+Minimun Height and width is like stoploss in ShareMarket , even if we apply width , height less than
+Min width/height , it wont go below it , it will stop at Minimun width and same goes for maximum
+height/width it wont cross the limit whatever the situation is .
+syntax :
+min-width : 20px;
+max-width : 20px;
+min-height : 20px;
+max=height : 20px;
+---------------------------------------------------------------------------------------------------------
+Font-family :
+Basically of two families : Sans-serif-has soft edges and serif-has sharp edges.
+use google fonts for it .
+clicl on font and click download family,extract and right-click -> install for all users.
+
+
 
