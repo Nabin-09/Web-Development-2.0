@@ -1,0 +1,101 @@
+What we need to do to get started :
+Setup Html Boiler code :
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chapter 1</title>
+</head>
+<body>
+    <h1>Namaste</h1>
+</body>
+</html>
+Made a styles sheet styles.css and use some basic styling:
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+h1{
+    background-color: red;
+}
+and link them using the link tag :<link rel="stylesheet" href="styles.css">
+--------------------------------------------------------------------------------
+Table of content : 
+*Width and height
+*color & Background-color
+*Units : px % vm vh em rem
+*max-width and max-height
+*font-family
+*font-size
+*line-height
+*text-align
+*padding
+*margin
+*border
+*display
+*position
+*background
+*flex
+*pseudo-elements
+*pseudo-classes
+*animation
+*media queries
+-------------------------------------------------------------------------------
+Width and height : 
+if we use: h1{
+}
+we are targetting all h1's in the html page
+task : made a red box (box always means div out here,div stands for divisions)
+Where we have more than 1 element or rectangular shape , its a div.
+making a red box - 
+html :
+<div class="red"></div>
+css :
+.red{
+ background-color : red;
+ width : 300px;
+ height : 400px;
+}
+classes : collection of objects
+ID : specific for any component of page 
+we use # to target IDs and . to target classes in an html like we targetted .red in the above example.
+---------------------------------------------------------------------------------------------------
+Color and Background-color: 
+color changes the color of the text whereas bg-color changes the color of background and the are of div left after using text.
+-----------------------------------------------------------------------------------------------------------------------------
+Units :  px % vm vh em rem
+px->Pixels: It is fixed area given to a div , it wont respond to different screen sizes and will remian constant all over.
+%-> percentage of screen , and it *changes itself with respect to size of screen*
+vw and vh->viewport width and viewport height: eg 10 vw will take 10% area of screen whereas % takes 10% area of the parent class . eg
+ <div id="parent">
+        <div id="child"></div>
+ </div>
+css :
+ #parent{
+width : 100px;
+height : 100px;
+}
+#child {
+ width : 100vw ;
+ height : 100 vh;
+} //covers whole screen
+#child{
+ width : 100%
+ height : 100%
+}//covers whole Parent div and not the screen.
+em : depends on the font size of element and if given to parent is applied on child too
+#test{
+ font-size : 16px;
+ width : 2em;
+ height : 2em;
+ background-color : red;
+}
+Here a box of 32px is created if we increase font-size to 20 , div size incerases to 40px.
+
