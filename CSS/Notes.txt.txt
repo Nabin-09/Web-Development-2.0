@@ -118,7 +118,107 @@ max=height : 20px;
 Font-family :
 Basically of two families : Sans-serif-has soft edges and serif-has sharp edges.
 use google fonts for it .
-clicl on font and click download family,extract and right-click -> install for all users.
+click on font and click download family,extract and right-click -> install for all users.
+The font family selection in (X)HTML, CSS, and derived systems specifies a list of prioritized fonts and generic family names
+we have some more properties :
+font-weight : 100-900
+text-transform : Capitalize,uppercase,lowercase etc
+text-decoration:underline,dashed,overline etc.;
+font-size : size of fonts. use vw and vh for responsiveness
+line-height : margin between lines of text , use 1,1.1 etc
+text-align : center,right,left,justify.
+----------------------------------------------------------------------------------------------------------------
+Margin ,Padding , Display and Position : 
+Padding : spacing between contents of body and inside and its outline.
+Margin : Spacing between two bodies and spacing is applied outside outline of component
+Border : border outside component 
+syntax - border : 3px Solid black;
+we also have border radius : roundens the border/edges of components and 50% makes it circular.
+***Display : Block //all the space is mine and simply takes all the space even if one element is inline and other is block , block comes down to next line 
+        : Inline //Elements can take adjacent space, we cannot increase its width and height
+        : Inline-block // We can increase its height and width.
+***Position : Absolute - An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
 
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+Absolue element to screen me 1 unit upar utha deta hai and vo kisike bhi upar move ho skta hai and if css is like 
+element 1 {
+}
+element 2{
+}
+element 3{
+}
+then if element 2 and element is 3 is absolute , element 2 , element 1 ke upar jaa skega but element 3,element 2 aur 1 dono ke upar hoga
+            : Relative - Same as absolute but the element is relative to the parent container and will not move out of it , remember
+              the parent container must be Relative and not child container.
+            : Fixed - Fixed in the page ,even when we scroll the page 
+----------------------------------------------------------------------------------------------------------------------------------
+BackGround : 
+in css file :
+background : url(); // sets background
+background-size : cover(Covers whole div)
+                : contain(contains whole image in div and starts to repeat if extraa space left)
+backgrund-position : centre (aligns image in div)
+background-repeat  : no-repeat (doesn't rep  
+background-gradient : (to right,red,yellow); to right bottom ,to left etc
+-----------------------------------------------------------------------------------
+Flexbox is not applied on children but on parent , it brings all the children on same axis , two axes are activated :
+x-axis : main axis 
+y-axis : cross axis
+direction of elements tell us about the direction of main / cross axis.
+Justify-content : used to work in main axis.
+align-items : used to work in cross axis.
+code :
+html : 
+  <div class="box">
+        <div class="box1">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        <div class="box3">
+
+        </div>
+    </div>
+css : 
+.box{
+    display: flex;
+    align-items: center; /* works in y axis hence brings elements in centre in the y axis */
+    justify-content: center;/* works in x axis hence brings elements in centre in the x axis */
+    /*Space-between , space-around,space-evenly,end*/
+    background-color: black;
+    height: 200px;
+    width: 200px;
+}
+.box1{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+.box2{
+    background-color: green;
+    width: 50px;
+    height: 50px;
+}
+.box3{
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+---------------------------------------------------------------------------------------------------------------
+Pseudo elements and pseudo classes :
+Pseudo Elements   :
+::before 
+::after
+::first-letter
+::first-line 
+::selection
+Pseudo Classes :
+:hover - mouse over content
+:active - content clicked
+:focus - When Clicked and left
+:nth-child(n) , takes 1,2,3.. or even 1n,2n as inputs.
+Each elements has a possibility that if it desires it can activate "after and before" properties.
+-----------------------------------------------------------------------------------------------------------------
 
 
