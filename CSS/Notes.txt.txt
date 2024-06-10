@@ -220,6 +220,14 @@ Pseudo Classes :
 :nth-child(n) , takes 1,2,3.. or even 1n,2n as inputs.
 Each elements has a possibility that if it desires it can activate "after and before" properties.
 -----------------------------------------------------------------------------------------------------------------
-
+Color Coding : 
+Hexadecimal : #
+RGB Notation : rgb 
+RGBA Functional Notation  : rgba 
+Max values denote White , min values denote black
+rgb(255,255,255);
+Hex : #(ffffff) - white (000000)- black
+rgba : a is alpha meaning transparency (0-1)
+hsl : hue saturation light(NOT IMPORTANT)
 
 
