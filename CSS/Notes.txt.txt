@@ -239,6 +239,4 @@ code :
     <div class="elem" id="elem3"></div>
 display : grid;
 It handles both the axis paralley.
-
-
-
+...
