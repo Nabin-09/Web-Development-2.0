@@ -229,5 +229,16 @@ rgb(255,255,255);
 Hex : #(ffffff) - white (000000)- black
 rgba : a is alpha meaning transparency (0-1)
 hsl : hue saturation light(NOT IMPORTANT)
+------------------------------------------------------------------------------------------------------------------------
+                                  GRIDS :
+Shortcuts : 
+.elem#elem$*3
+code : 
+    <div class="elem" id="elem1"></div>
+    <div class="elem" id="elem2"></div>
+    <div class="elem" id="elem3"></div>
+display : grid;
+It handles both the axis paralley.
+
 
 
