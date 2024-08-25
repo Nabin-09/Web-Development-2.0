@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+#navv{
+    background-color: tomato;
+    display: grid;
+    grid-template-columns: 30% 17.25% 17.25% 17.25% 17.25%;
+    grid-template-rows: 8vh;
+    justify-items: center;
+    align-items: center;
+}
+#navv h1{
+    justify-self: left;
+}
