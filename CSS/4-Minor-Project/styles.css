@@ -51,10 +51,45 @@ html,body{
     height: 200px;
     width: 100%;
     margin-top:40px;
+    display: flex;
+    justify-content: space-between;
 }
 #center-in p{
     font-size: 20px;
     font-weight:600;
     line-height: 30px;
 
+}
+#right{
+    width: 20% ;
+}
+.elem{
+    margin: 5px;
+    padding: 10px 0px;
+    border-top: 3px solid  black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.elem i{
+    font-size: 25px;
+    font-weight: 500;
+    opacity: 0;
+}
+.elem:hover i{
+    opacity: 1;
+}
+.elem:hover a{
+   text-decoration: wavy;
+}
+.elem a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+#bottom{
+    height: 35%;
+    width: 100%;
 }
