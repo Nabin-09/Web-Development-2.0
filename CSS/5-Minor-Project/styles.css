@@ -14,23 +14,20 @@ html,body{
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 90px;
-    padding-top: 60px;
+    align-items: flex-end;
+    
+    padding: 0px 90px;
+    padding-top: 70px;
 }
 #left{
     height: 100%;
-    width: 48%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 50px;
 }
-#right{
-    height: 100%;
-    width: 48%;
-    background-color: blue;
-}
+
 #left h1{
      font-size: 130px;
      line-height: 120px;
@@ -38,7 +35,7 @@ html,body{
       
 }
 #bottom-left{
-    height: 40%;
+    /* height: 40%; */
     width: 100%;
    
 }
@@ -70,4 +67,74 @@ html,body{
 }
 #left h2{
     margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+#left p{
+     font-size: 18px;
+     width: 70%;
+     font-weight: 600;
+     color:#444;
+     line-height: 26px;
+}
+#right{
+    height: 90%;
+    width: 45%;
+  
+    position: relative;
+}
+#right-top{
+    height: 50px;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+#right-top h4{
+    font-size: 20px;
+    font-family: "Work sans";
+    font-weight: 600;
+
+}
+#right-top h5{
+    font-size: 14px;
+}
+#right-top h5 i{
+    color: gold;
+    font-size: 13px;
+}
+#right img{
+    width: 100%;
+    height: 92%;
+    object-fit: cover;
+}
+#black-gola{
+    display: flex;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(13, 17, 41);
+    color:#fff;
+    border-radius: 50%;
+    right: -18%;
+    align-items: center;
+    justify-content:center;
+    justify-items: center;
+    top:20%
+}
+#black-gola h5{
+    font-size: 30px;
+    font-weight: 600;
+}
+#rotated{
+    position: absolute;
+    left: -6%;
+    bottom: 0;
+    rotate: -90deg;
+    /*learn about Transform origin (useful for rotating stuff)*/
+    transform-origin:0 0 ;
+    font-size: 17px;
+    font-weight: 300;
 }
