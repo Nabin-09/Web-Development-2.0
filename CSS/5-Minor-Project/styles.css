@@ -29,8 +29,9 @@ html,body{
 }
 
 #left h1{
-     font-size: 130px;
-     line-height: 120px;
+     /* font-size: 130px; */
+     font-size: 8vw;
+     line-height: 8.25vw;
      font-weight: 500;
       
 }
@@ -67,15 +68,15 @@ html,body{
 }
 #left h2{
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 1.75vw;
     margin-bottom: 15px;
 }
 #left p{
-     font-size: 18px;
+     font-size: 1.2vw;
      width: 70%;
      font-weight: 600;
      color:#444;
-     line-height: 26px;
+     line-height: 1.8vw;
 }
 #right{
     height: 90%;
@@ -137,4 +138,140 @@ html,body{
     transform-origin:0 0 ;
     font-size: 17px;
     font-weight: 300;
+}
+@media (max-width:600px){
+    #main{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0px 10px;
+        padding-top: 30px;
+        gap: 30px;
+    }
+    #left{
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        gap: 50px;
+    }
+    
+    #left h1{
+         /* font-size: 130px; */
+         font-size: 17vw;
+         line-height: 15vw;
+         font-weight: 500;
+          
+    }
+    #bottom-left{
+        /* height: 40%; */
+        width: 100%;
+       
+    }
+    #color{
+        width:fit-content;
+        padding: 6px 10px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #000;
+    }
+    #color1{
+        height: 12px;
+        width: 12px;
+        background-color: burlywood;
+        border-radius: 50%;
+    }
+    #color2{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: brown;
+    }
+    #color h5{
+        font-size: 13px;
+        margin-right: 5px;
+        font-weight: 600;
+    }
+    #left h2{
+        margin-top: 20px;
+        font-size: 3vw;
+        margin-bottom: 10px;
+    }
+    #left p{
+         font-size: 2.6vw;
+         width: 85%;
+         font-weight: 600;
+         color:#444;
+         line-height: 3.6vw;
+    }
+    #right{
+      
+        width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+        position: relative;
+    }
+    #right-top{
+        height: 40px;
+        width: 100%; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 00px;
+    }
+    #right-top h4{
+        font-size: 20px;
+        font-family: "Work sans";
+        font-weight: 600;
+    
+    }
+    #right-top h5{
+        font-size: 14px;
+    }
+    #right-top h5 i{
+        color: gold;
+        font-size: 13px;
+    }
+    #right img{
+        width: 100%;
+        height: 92%;
+        object-fit: cover;
+        display: flex;
+
+    }
+    #black-gola{
+        display: flex;
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background-color: rgb(13, 17, 41);
+        color:#fff;
+        border-radius: 50%;
+        right: -18%;
+        align-items: center;
+        justify-content:center;
+        justify-items: center;
+        top:20%
+    }
+    #black-gola h5{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    #rotated{
+        position: absolute;
+        left: -1%;
+        bottom: 9%;
+        rotate: -90deg;
+        /*learn about Transform origin (useful for rotating stuff)*/
+        transform-origin:0 0 ;
+        font-size: 17px;
+        font-weight: 300;
+    }
 }
