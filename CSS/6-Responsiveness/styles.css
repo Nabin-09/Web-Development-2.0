@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 'Quicksand';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#parent{
+    height: 500px;
+    width: 500px;
+    background-color: cyan;
+}
+#child{
+    height: 250px;
+    width: 250px;
+    /*when height is given according to pixels it wont change but when given in % it will change
+    with the size of parent container*/
+    /*vw , vh (viewport width and height) , its clear that both parent and child changes it 
+    according to the size of viewport of device(landscape / potrait)*/
+    /*Other units : vmax  ,vmin
+    viewport max( use unit accordingly , if height if screen > widhth , use vh else vw
+    and vmin considers the one with minimum width (rarely used)
+    */
+    background-color: brown;
+}
