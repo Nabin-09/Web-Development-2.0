@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    padding: 5vw;
+}
+
+button {
+    height: 6vw;
+    width: 19vw;
+    padding: 10px 20px;
+    font-size: 2.5vw;
+    background-color: transparent;
+    border: 5px solid cyan;
+    color: cyan;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden; 
+    z-index: 1; 
+}
+
+button::after {
+    content: "";
+    height: 200%; 
+    width: 200%;  
+    background-color: cyan;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    transition: all linear 0.5s;
+    z-index: -1;
+}
+
+button:hover::after {
+    transform: translate(-50%, -50%) scale(1); 
+}
+
+button:hover {
+    color: black;
+}
