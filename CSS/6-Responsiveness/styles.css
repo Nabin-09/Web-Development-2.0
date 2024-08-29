@@ -24,5 +24,6 @@ html,body{
     viewport max( use unit accordingly , if height if screen > widhth , use vh else vw
     and vmin considers the one with minimum width (rarely used)
     */
+    /*animations*/
     background-color: brown;
 }
