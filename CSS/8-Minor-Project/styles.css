@@ -62,3 +62,22 @@ html, body {
     background-color: blue;
     position: relative;
 }
+#content video{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+#overlay{
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 3vw;
+    color: #fff;
+}
+#over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
