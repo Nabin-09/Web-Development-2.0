@@ -74,6 +74,8 @@ html, body {
     bottom: 0;
     padding: 3vw;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.182);
+    backdrop-filter: blur(1px);
 }
 #over1{
     display: flex;
@@ -98,4 +100,38 @@ html, body {
     padding: 2vw;
     border-radius: 50%;
     border: 2px solid #fff;
+}
+#scroll{
+    height: 45vh;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+#scroll img{
+    height: 85%;
+    border-radius: 50%;
+    width: 15%;
+    margin: 1vw;
+    object-fit: cover;
+    object-position: 30% 30%;
+}
+#container{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    padding: 2vw;
+    animation-name: anime;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes anime {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
