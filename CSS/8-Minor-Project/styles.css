@@ -81,3 +81,21 @@ html, body {
     justify-content: space-between;
 
 }
+#over2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid white;
+}
+#over1 h1{
+    font-family: monument;
+    font-weight: 500;
+    font-size: 3.6vw;
+    mix-blend-mode:overlay;
+}
+#over2 h2{
+    font-size: 1vw;
+    padding: 2vw;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
