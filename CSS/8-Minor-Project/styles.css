@@ -135,3 +135,105 @@ html, body {
         transform: translateX(-100%);
     }
 }
+#alphabet{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#alphabet h5{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: italic;
+    font-family: monument;
+    border-bottom: 2px solid black;
+    letter-spacing: 2px;
+
+}
+#alphabet h6{
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    padding: 0.6vw 0.8vw;
+    border-radius: 50%; 
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+#alphabet h6:hover{
+    border: 2px solid black;
+}
+#page2{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding:2vw 5vw;
+
+}
+#page2-1{
+    height: 90%;
+    width: 50%;
+    background-image: url(https://images.unsplash.com/photo-1569210538317-4d53f92a0e21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fG1vZGVsc3xlbnwwfHwwfHx8MA%3D%3D);
+    background-size:cover;
+    background-position: 20%;
+    border-radius: 6%;
+    position: relative;
+}
+#page2-1 h1{
+    bottom: 1vh;
+    color: black;
+    margin: 40vw 0vw 0vw 2vw;
+    font-size: 3vw;
+    font-family: monument;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+#page2-2{
+    height: 100%;
+    width: 46%;
+}
+#page2-2 img{
+    width:100%;
+    object-fit: cover;
+    height: 70%;
+    border-radius: 6%;
+}
+#page2-text{
+    height: 29.25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#page-2-first{
+    font-weight: 600;
+    padding: 1vw 2vw;
+    font-family: monument;
+}
+#page-2-second{
+    font-weight: 400;
+    padding: 2vw 1vw;
+    font-family: monument;
+    font-size: .8vw;
+}
+#page3{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 5vw 4vw;
+}
+#page3>h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monument;
+    font-size: 3vw;
+    font-weight: 600;
+}
