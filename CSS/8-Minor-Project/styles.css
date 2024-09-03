@@ -57,6 +57,16 @@ body{
     top:19%
 
 }
+#nav h1::before{
+    content : "Model Management";
+    font-weight: 300;
+    font-size: 12px;
+    position: absolute;
+    bottom:17%;
+    right: 3%;
+    letter-spacing: 1px;
+    color: rgb(103, 98, 98);
+}
 #nav h2:nth-last-child(1){
     width: 10%;
 }
