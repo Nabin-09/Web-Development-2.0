@@ -7,6 +7,9 @@ html, body {
     height: 100%;
     width: 100%;
 }
+body{
+    background-color: #f8f8f8;
+}
 #main{
     height: 100%;
     width: 100%;
@@ -236,4 +239,62 @@ html, body {
     font-family: monument;
     font-size: 3vw;
     font-weight: 600;
+    margin-bottom: 7vh;
+}
+.elem{
+    height: 16vh;
+    width: 100%;
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: relative;
+}
+.elem img{
+    height: 110px;
+    width: 120px;
+    position: absolute;
+    border-radius: 50%;
+    left: 12%;
+    transition: all ease 0.7s;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0;
+}
+.elem:hover img{
+    opacity: 1;
+    left: 24%;
+}
+.elem h4{
+    font-size: 1.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 6%;
+}
+.elem2{
+    width: 40%;
+}
+.elem2 h1{
+    font-size: 2.7vw;
+    font-weight: 600;
+}
+.elem2 h5{
+    font-size: 1vw;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.elem:hover{
+    background-color: #dfdada;
+}
+.elem:nth-last-child(1){
+    border-bottom: 2px solid black;
+}
+#footer{
+    height: 100%;
+    width: 100%;
+}
+#marquee{
+    height: 20vh;
+    wi
 }
