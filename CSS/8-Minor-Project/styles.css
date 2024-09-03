@@ -34,8 +34,9 @@ body{
     align-items: center;
     justify-content: center;
     border-right: 2px solid black;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: monument;
 }
 #nav h1{
     height: 100%;
@@ -47,6 +48,9 @@ body{
     font-size: 45px;
     letter-spacing: -2px;
     position: relative;
+}
+#nav h4{
+    display: none;
 }
 #nav h1::after{
     content: "©";
@@ -343,5 +347,67 @@ body{
     }
     to{
         transform: translateX(calc(-100% - 20px))
+    }
+}
+@media (max-width:600px) {
+    #main{
+        height: 100%;
+        width: 100%;
+        background-color: #f8f8f8;
+        position: relative;
+        padding-top: 0.1px;
+    }
+    #nav{
+        height: 9vh;
+        margin-top: 19px;
+        padding: 1vw 0vw 0vw 4vw;
+    }
+    #nav h2{
+        height: 100%;
+        width: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px solid black;
+        font-size: 22px;
+        font-weight: 400;
+        font-family: monument;
+        display: none;
+    }
+    #nav h1{
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: monument;
+        font-size: 34px;
+        letter-spacing: -2px;
+        position: relative;
+    }
+    #nav h1::after{
+        content: "©";
+        font-weight: 300;
+        font-size: 20px;
+        position: absolute;
+        right: -4%;
+        top:19%
+    
+    }
+    #nav h1::before{
+        content : "Model Management";
+        font-weight: 300;
+        font-size: 9px;
+        position: absolute;
+        bottom:11%;
+        right: 3%;
+        letter-spacing: 1px;
+        color: rgb(103, 98, 98);
+    }
+    #nav h2:nth-last-child(1){
+        width: 10%;
+    }
+    #nav h2:nth-last-child(2){
+        width: 29%;
     }
 }
