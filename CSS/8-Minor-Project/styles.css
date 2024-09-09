@@ -7,7 +7,7 @@ html, body {
     height: 100%;
     width: 100%;
 }
-@font-face{font-family:monument extended;font-style:normal;font-weight:400;src:local('Monument Extended'),url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff) format('woff')}@font-face{font-family:monument extended;font-style:normal;font-weight:800;src:local('Monument Extended'),url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff')}
+
 body{
     background-color: #f8f8f8;
 }
