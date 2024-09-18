@@ -114,6 +114,7 @@ body{
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    box-sizing: border-box;
 }
 #bottom::-webkit-scrollbar{
     display: none;
@@ -127,6 +128,10 @@ body{
     background-color: blue;
     display: inline-block;
     overflow: hidden;
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 .elem img{
     height: 100%;
@@ -134,4 +139,12 @@ body{
     object-fit: cover;
     object-position: center;
     overflow: hidden;
+}
+@keyframes anime {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1000%);
+    }
 }
