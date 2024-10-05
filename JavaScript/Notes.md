@@ -403,6 +403,129 @@ This will print each element of the `arr` array.
 
 
 # Functions
+
+
+## Functions in JavaScript
+
+Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is a reusable block of code designed to perform a particular task.
+
+## Function Declaration
+
+```js
+function nameOfFunction(parameter1, parameter2) {
+    // code to be executed
+}
+```
+
+Example:
+```js
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet('Nabin'));  // Output: Hello, Nabin!
+```
+
+## Function Expression
+
+```js
+const nameOfFunction = function(parameter1, parameter2) {
+    // code to be executed
+};
+```
+
+Example:
+```js
+const sum = function(a, b) {
+    return a + b;
+};
+
+console.log(sum(3, 5));  // Output: 8
+```
+
+## Arrow Functions
+
+Arrow functions provide a concise syntax for writing functions in ES6.
+
+```js
+const nameOfFunction = (parameter1, parameter2) => {
+    // code to be executed
+};
+```
+
+Example:
+```js
+const multiply = (a, b) => a * b;
+
+console.log(multiply(4, 6));  // Output: 24
+```
+
+## Default Parameters
+
+Default parameters allow you to initialize parameters with default values if they are not provided in the function call.
+
+```js
+function greet(name = 'Guest') {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet());  // Output: Hello, Guest!
+```
+
+## Rest Parameters
+
+Rest parameters allow a function to accept an indefinite number of arguments as an array.
+
+```js
+function sum(...numbers) {
+    return numbers.reduce((acc, curr) => acc + curr);
+}
+
+console.log(sum(1, 2, 3, 4));  // Output: 10
+```
+
+## Returning Values
+
+Functions can return a value using the `return` statement.
+
+```js
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 5));  // Output: 15
+```
+
+## Immediately Invoked Function Expression (IIFE)
+
+An IIFE is a function that runs as soon as it is defined.
+
+```js
+(function() {
+    console.log("IIFE executed!");
+})();
+```
+
+Output: 
+```
+IIFE executed!
+```
+
+## Function Hoisting
+
+Function declarations are hoisted in JavaScript, meaning they can be called before they are defined.
+
+```js
+console.log(square(4));  // Output: 16
+
+function square(n) {
+    return n * n;
+}
+```
+
+Note: Function expressions are **not** hoisted.
+
+
 # Arrays
 # Objects
 # Prototypes
