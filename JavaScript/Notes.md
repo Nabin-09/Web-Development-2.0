@@ -525,6 +525,255 @@ function square(n) {
 
 Note: Function expressions are **not** hoisted.
 
+## Types of Function notation.
+### Normie way
+```js
+function trial(){
+  //
+}
+```
+### Variable way
+```js
+var trial = function(){
+  //
+}
+```
+### Anonymous fucntions
+```js
+function(){
+  //
+}
+```
+### Fat arrow
+```js
+()=>{
+  //
+}
+var a = ()=>{
+  //Basic Fat arrow
+}
+
+var g = (ab)=>{
+  //Single Paramter arrow
+}
+/*
+Other Way of writing single paramter arrow fn
+var g = ab =>{
+  //code
+}*/
+g(12)
+``` 
+# Return 
+
+
+# Functions in JavaScript
+
+Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is a reusable block of code designed to perform a particular task.
+
+## Function Declaration
+
+```js
+function nameOfFunction(parameter1, parameter2) {
+    // code to be executed
+}
+```
+
+Example:
+```js
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet('Nabin'));  // Output: Hello, Nabin!
+```
+
+## Function Expression
+
+```js
+const nameOfFunction = function(parameter1, parameter2) {
+    // code to be executed
+};
+```
+
+Example:
+```js
+const sum = function(a, b) {
+    return a + b;
+};
+
+console.log(sum(3, 5));  // Output: 8
+```
+
+## Arrow Functions
+
+Arrow functions provide a concise syntax for writing functions in ES6.
+
+```js
+const nameOfFunction = (parameter1, parameter2) => {
+    // code to be executed
+};
+```
+
+Example:
+```js
+const multiply = (a, b) => a * b;
+
+console.log(multiply(4, 6));  // Output: 24
+```
+
+## Default Parameters
+
+Default parameters allow you to initialize parameters with default values if they are not provided in the function call.
+
+```js
+function greet(name = 'Guest') {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet());  // Output: Hello, Guest!
+```
+
+## Rest Parameters
+
+Rest parameters allow a function to accept an indefinite number of arguments as an array.
+
+```js
+function sum(...numbers) {
+    return numbers.reduce((acc, curr) => acc + curr);
+}
+
+console.log(sum(1, 2, 3, 4));  // Output: 10
+```
+
+## Returning Values
+
+Functions can return a value using the `return` statement.
+
+```js
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 5));  // Output: 15
+```
+
+## Immediately Invoked Function Expression (IIFE)
+
+An IIFE is a function that runs as soon as it is defined.
+
+```js
+(function() {
+    console.log("IIFE executed!");
+})();
+```
+
+Output: 
+```
+IIFE executed!
+```
+
+## Function Hoisting
+
+Function declarations are hoisted in JavaScript, meaning they can be called before they are defined.
+
+```js
+console.log(square(4));  // Output: 16
+
+function square(n) {
+    return n * n;
+}
+```
+
+Note: Function expressions are **not** hoisted.
+
+
+## Return Notation in Fat Arrow Functions
+
+In fat arrow functions, the `return` statement works in two ways depending on the syntax used.
+
+### 1. **Implicit Return**
+
+If the function contains only a single expression, you can omit the `return` keyword as well as the curly braces. This is known as implicit return, and the result of the expression is automatically returned.
+
+```js
+const sum = (a, b) => a + b;
+
+console.log(sum(3, 4));  // Output: 7
+```
+
+In the above example, `a + b` is the expression, and its result is automatically returned without needing the `return` keyword.
+
+### 2. **Explicit Return**
+
+If the function has more than one statement, you need to use curly braces `{}` and explicitly return the value using the `return` keyword.
+
+```js
+const sum = (a, b) => {
+    const result = a + b;
+    return result;
+};
+
+console.log(sum(5, 8));  // Output: 13
+```
+
+In this example, since there are multiple statements (declaring a variable and returning it), you need to use curly braces and explicitly return the value.
+
+### Key Points:
+- Omit `return` for single-line expressions (implicit return).
+- Use `return` and curly braces for multi-line functions (explicit return).
+
+# Undefined , Not Defined and NULL
+## Undefined, Not Defined, and Null in JavaScript
+
+In JavaScript, it's important to understand the distinctions between `undefined`, `not defined`, and `null`, as they are often used to represent the absence of a value or variable.
+
+### 1. Undefined
+
+- **Definition**: A variable that has been declared but has not been assigned a value is `undefined`. It is a data type in JavaScript.
+- **Example**:
+    ```js
+    let x;
+    console.log(x);  // Output: undefined
+    ```
+
+- **Function Return**: If a function does not explicitly return a value, it returns `undefined` by default.
+    ```js
+    function noReturn() {}
+    console.log(noReturn());  // Output: undefined
+    ```
+
+### 2. Not Defined
+
+- **Definition**: When a variable is referenced that has not been declared in the current scope, it results in a `ReferenceError`. This is often described as "not defined."
+- **Example**:
+    ```js
+    console.log(y);  // ReferenceError: y is not defined
+    ```
+
+- **Important Note**: Trying to access a variable that hasn't been declared will throw an error, whereas accessing a declared but uninitialized variable will return `undefined`.
+
+### 3. Null
+
+- **Definition**: `null` is an assignment value that represents the intentional absence of any object value. It is a primitive value and can be assigned to a variable as a representation of "no value."
+- **Example**:
+    ```js
+    let obj = null;
+    console.log(obj);  // Output: null
+    ```
+
+- **Type**: You can check the type of `null` using the `typeof` operator, which returns `object`, which can be misleading.
+    ```js
+    console.log(typeof null);  // Output: "object"
+    ```
+
+### Key Differences
+
+| Feature         | Undefined                     | Not Defined                  | Null                        |
+|-----------------|-------------------------------|------------------------------|-----------------------------|
+| State           | Variable declared but not assigned | Variable not declared        | Intentionally set to no value |
+| Type            | `undefined`                   | Throws `ReferenceError`      | `object`                   |
+| Usage           | Automatically assigned by JavaScript | Causes an error             | Used as a placeholder       |
+
 
 # Arrays
 # Objects

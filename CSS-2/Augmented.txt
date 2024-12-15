@@ -1,0 +1,29 @@
+units :
+px % vw vh max min em rem (mostky used Units)
+px - Pixel is 1/96 of an inch , more pixels moere crystal clear display
+% - is the percent of screen , changes as size of screen is changed, it takes values from parent.
+vw is viewport height , it takes values from screen.(% interms of width of screen)
+vh - same as viewport height (% in terms of height)
+em - takes from the size of parent font size (2em is twice the size of font size of the parent container)
+rem - depends on the size of root element
+max-width , min-width , max-height , min-width : these are stoplosses and maxProfits in case of height and width
+
+font-family :
+main are two font families :
+serif - has edges and are very sharp
+sans-serif - curvy
+use Google fonts
+font-size
+line-height
+text-align
+padding
+margin
+border
+display
+position
+background
+flex
+pseudo-elements
+pseudo-classes
+animation
+media queries

@@ -1,0 +1,70 @@
+
+*{
+    margin:0;
+    padding : 0;
+    box-sizing:border-box;
+    font-family: Gilroy;
+}
+html ,body {
+    height: 100%;
+    width: 100%;
+}
+/* #box{
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    position: absolute;
+    animation-name : anime;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+@keyframes anime {
+    from{
+        left: 0;
+        background-color: red;
+        rotate : 0;
+    }
+    to{
+        left:70%;
+        background-color: blue;
+        rotate: 360deg;
+    }
+} */
+img{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    animation-name: chutki;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards; /*comes to the default(forward position) where it started*/
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;/*rate of animation(in defualt its high in the beginning and slow at the end*/
+}
+@keyframes chutki {
+    /* from{
+        left: 0;
+        top:0;
+    }
+    to{
+        left: 80%;
+        top:50%
+    } */
+    /* If we dont to make it move across Hypotenuse */
+    0%{
+        left:0%;
+        top : 0%;
+        rotate:360deg;
+    }
+    50%{
+        left:80%;
+        top:0%;
+        rotate:0deg;
+    }
+    100%{
+        left:0%;
+        top:50%;
+        rotate:360deg;
+    }
+}
