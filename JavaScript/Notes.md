@@ -729,7 +729,7 @@ In JavaScript, it's important to understand the distinctions between `undefined`
 
 ### 1. Undefined
 
-- **Definition**: A variable that has been declared but has not been assigned a value is `undefined`. It is a data type in JavaScript.
+- **Definition**: A variable that has been declared but has not been assigned a value is `undefined`. It is a data type in JavaScript.It is a value , treated as garbage value.
 - **Example**:
     ```js
     let x;
@@ -744,7 +744,7 @@ In JavaScript, it's important to understand the distinctions between `undefined`
 
 ### 2. Not Defined
 
-- **Definition**: When a variable is referenced that has not been declared in the current scope, it results in a `ReferenceError`. This is often described as "not defined."
+- **Definition**: When a variable is referenced that has not been declared in the current scope, it results in a `ReferenceError`. This is often described as "not defined." It is an error , using an element without declaring it.
 - **Example**:
     ```js
     console.log(y);  // ReferenceError: y is not defined
@@ -754,7 +754,7 @@ In JavaScript, it's important to understand the distinctions between `undefined`
 
 ### 3. Null
 
-- **Definition**: `null` is an assignment value that represents the intentional absence of any object value. It is a primitive value and can be assigned to a variable as a representation of "no value."
+- **Definition**: `null` is an assignment value that represents the intentional absence of any object value. It is a primitive value and can be assigned to a variable as a representation of "no value." This is a value as well , which is returned when the element was not found.
 - **Example**:
     ```js
     let obj = null;
