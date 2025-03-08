@@ -909,7 +909,7 @@ for (const fruit of fruits) {
 - Iteration methods like `forEach()`, `map()`, and `for...of` simplify working with arrays.
 - Methods like `reduce()`, `filter()`, and `map()` are useful for functional programming.
 
-Arrays are an essential part of JavaScript, making data manipulation easier and more efficient.
+Arrays are an essential part of JavaScript, making data manipulation easier and more efficient  .
 
 
 # Objects
