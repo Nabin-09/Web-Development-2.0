@@ -911,10 +911,155 @@ for (const fruit of fruits) {
 
 Arrays are an essential part of JavaScript, making data manipulation easier and more efficient  .
 
+# This keyword
 
-# Objects
-# Prototypes
-# Prototypal Inheritance
+## `this` Keyword in JavaScript
+
+The `this` keyword refers to the object that is executing the current function. Its value depends on how and where the function is called.
+
+### 1. `this` in the Global Context
+In the global scope, `this` refers to the global object:
+- In a browser: `window`
+- In Node.js: `global`
+
+```javascript
+console.log(this); // In browsers, this refers to
+```
+
+## Case scenarios of `this` keyword
+  - `global`  : window
+  ```js
+  console.log(this);
+  //Returns the window object
+  //Window {0: Window, window: Window, self: Window, document: document, name: '', location: Location, …}
+  ```
+  - `function`  : window
+  ```js
+  function abcd(){
+    console.log(this);
+  }
+  //This returns the window object as well
+  ```
+  - `method`   : object
+  ```js
+  var obj = {
+    name : function(){
+      console.log(this);
+    }
+  }
+  obj.name();//This returns the parent object -  obj
+  ```
+  - `fnc inside method(es5)` : window
+  ```js
+  //Very important case
+  var obj2 = {
+    sayname : function(){
+      console.log(this);//This return object(Method of obj)
+      function childfn(){
+        console.log(this);//This return Window object(Function of mehtod of obj)
+      }
+      childfn();
+    }
+  }
+  obj2.sayname();
+  ```
+  - `fnc inside method(es6)` : object 
+  ```js
+  var obj3 = {
+    sayname : function(){
+      const child = ()=>{
+        console.log(this);//This return object in array fn
+      }  // arrow functions takes its value from the parent
+    }
+  }
+  //Special case : 
+  var obj4 = {
+    sayName : ()=>{//arrow function takes value from parent hence this here return window obj , hence use arrow fucntion inside a "function"
+      console.log(this);
+    }
+  }
+  obj4.sayName();
+  obj3.sayname();
+  ```
+  - `constructor fnc` : new blank object
+  ```js
+  function add (){
+    console.log(this);
+  }
+  const ans = new add()//returns a blank object
+  ```
+  - `event listener` : that element of event listener
+  ```js
+  document.querySelector("button")
+  .addEventListener("click" , function(){
+    console.log(this);//return the button , as event listener is applied on the button here
+  })
+  ```
+  ## Call , Apply , bind
+  **These are three ways to call a function refering an object as this**
+
+  `Call` : 
+  ```js
+  const obj = {name : "Nabin"}
+  function abcd(){
+    console.log(this);
+  }
+  abcd.call(obj);//returns the object and not window object
+  //abcd.call(obj , 12 , 34)//If method wants parameters
+  ``` 
+
+  `Apply` : 
+  ```js
+  //same as call but the parameters are passed in an array
+  const obj = {name : "Nabin"}
+  function abcd(){
+    console.log(this);
+  }
+  abcd.call(obj);//returns the object and not window object
+  //abcd.call(obj , [12,34])//If method wants parameters
+  ```
+
+  `bind` : 
+  ```js
+  //same as call , does not run the fucntion but returns another function which can be ran later
+  const obj = {name : "Nabin"}
+  function abcd(){
+    console.log(this);
+  }
+  const edf = abcd.bind(obj);
+  edf();//I can run this whenever we want
+  ```
+# Prototypal Inheritance : 
+ We know a human can walk , speak and dance and sing as well. A teacher can walk , speak and dance as well , but he can teach as well . In such cases we create onjects and we add something to the prototype of parent constructor function and children gets all the properties
+ ```js
+ function makeHuman(name , age){
+  this.name  = name;
+  this.age = age;
+ }
+ const human1 = new makeHuman("Nabin" , 21);
+ //VVVIP :
+ // Any function where we are using this and if we use new while calling the function then new out there means a blank object and in the blank object the 'this' is replaced by {}(blank object), therefore this.name is actually equal to the {}.name , we can make a constructor function using new keyword itself and to add properties in object we use this keyword
+ function makeHuman(name , age){
+  this.name = name;
+  this.age = age;
+  this.printMyname = function(){
+    console.log(this.name);//same function is passed to human1 and human2 and this is where memory is wasted.
+    //hence we can remove printMyname from here and locate it somewhere else  , this is called prototypal inheritance
+  }
+ }
+ makeHuman.prototype.gullak = 12;//each and every object now got gullk = 12 and we can access it using human1.gullak
+ makeHuman.prototype.printMyname = function(){
+  console.log(this.name);
+ }
+ //now we can do human1.printMyName even if printMyname is not is makeHuman fn as well.
+ const human1 = new makeHuman("Nabin" , 21);
+ const human2 = new makeHuman("Ludo",69);
+ ```
+ ## Closures : 
+ any function that returns some other functions.
+ ```js
+ 
+ ```
 # asynchronous
 # es6 climax
 # Questions
