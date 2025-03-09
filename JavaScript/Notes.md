@@ -1029,7 +1029,7 @@ console.log(this); // In browsers, this refers to
   const edf = abcd.bind(obj);
   edf();//I can run this whenever we want
   ```
-# Prototypal Inheritance : 
+# `Prototypal Inheritance` : 
  We know a human can walk , speak and dance and sing as well. A teacher can walk , speak and dance as well , but he can teach as well . In such cases we create onjects and we add something to the prototype of parent constructor function and children gets all the properties
  ```js
  function makeHuman(name , age){
@@ -1055,11 +1055,121 @@ console.log(this); // In browsers, this refers to
  const human1 = new makeHuman("Nabin" , 21);
  const human2 = new makeHuman("Ludo",69);
  ```
- ## Closures : 
+ ## `Closures` : 
  any function that returns some other functions.
  ```js
- 
+ function counter(){
+  let count = 0 ;
+  return function (){
+    count++;
+    console.log(count);
+  }
+ }
+
+ let fnc = counter();
+ fnc();//count value = 1
+ fnc();//count value = 2
+ //This is closure a function that reuturn another function and uses a variable of parent function.
  ```
+ A JavaScript closure is when an inner function remembers and uses variables from its outer function's scope, even after the outer function has finished executing. It's like the inner function carrying a "memory" of those variables.
+```js
+function createCounter() {
+  let count = 0; // Outer function variable
+
+  return function() { // Inner function (closure)
+    count++;
+    return count;
+  };
+}
+
+const myCounter = createCounter();
+
+console.log(myCounter()); // Output: 1
+console.log(myCounter()); // Output: 2
+console.log(myCounter()); // Output: 3
+```
+- `createCounter` defines count.
+- The inner function returned by `createCounter` remembers `count` and increments it each time it's called.
+- `myCounter` holds this inner function.
+## `Event Delegation` : 
+# Event Delegation in JavaScript
+
+Event delegation is a powerful technique in JavaScript that allows you to handle events efficiently. Instead of attaching individual event listeners to each child element, you attach a single listener to a parent element.
+
+## How it Works
+
+1.  **Event Bubbling:** Events "bubble up" the DOM tree. When an event occurs on a child, it propagates to its parent.
+2.  **Single Listener:** You place one event listener on a common ancestor (parent).
+3.  **Target Identification:** Inside the listener, `event.target` tells you which child triggered the event.
+4.  **Conditional Handling:** Use `event.target` to run specific code for each child.
+
+## Benefits
+
+* **Performance:** Fewer event listeners, especially with many children.
+* **Dynamic Content:** Works seamlessly with added or removed children.
+* **Clean Code:** Reduces code complexity.
+
+## Example
+
+```html
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  const myList = document.getElementById('myList');
+
+  myList.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+      console.log('Clicked:', event.target.textContent);
+      // Handle the clicked list item
+    }
+  });
+</script>
+```
+## Higher-Order Functions in JavaScript
+
+Higher-order functions are a fundamental concept in JavaScript that enables powerful and flexible code. Essentially, they are functions that can:
+
+* **Take other functions as arguments.**
+* **Return functions as their results.**
+
+This ability to treat functions as first-class citizens allows for abstractions and patterns that greatly enhance code reusability and expressiveness.
+
+**Key Characteristics:**
+
+* **Function as Argument:** A higher-order function can accept one or more functions as input parameters.
+* **Function as Return Value:** A higher-order function can return another function as its output.
+
+**Common Examples:**
+
+* `map()`: Transforms each element of an array using a provided function.
+* `filter()`: Creates a new array with elements that pass a test implemented by a provided function.
+* `reduce()`: Applies a function against an accumulator and each element of the array (from left to right) to reduce it to a single value.
+* `forEach()`: Executes a provided function once for each array element.
+* `setTimeout()`: Schedules a function to be executed after a specified delay.
+
+**Example:**
+
+```javascript
+function operate(func, num1, num2) {
+  return func(num1, num2);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+console.log(operate(add, 5, 3)); // Output: 8
+console.log(operate(multiply, 5, 3)); // Output: 15
+
 # asynchronous
+
 # es6 climax
 # Questions
