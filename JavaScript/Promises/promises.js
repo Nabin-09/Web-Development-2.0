@@ -27,3 +27,24 @@ const promiseThree = new Promise(function(resolve , reject){
 promiseThree.then(function(user){
     console.log(user)//passing values through sending parameters to resolve
 })
+
+const promiseFour = new Promise(function(resolve , reject){
+    setTimeout(function(){
+        let error = true;
+        if(!error){
+            resolve({username : "Nabin" , password : "FunkyDog"});
+        }
+        else{
+            reject("ERROR NIGGA!")
+        }
+    },1000)
+})
+//Very important then() chaining
+promiseFour.then((user)=>{
+    console.log(user);
+    return user.username
+}).then((username)=>{
+    console.log(username);
+}).catch(function(error){
+    console.log(error);
+})
