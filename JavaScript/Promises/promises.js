@@ -8,3 +8,12 @@ const promiseOne = new Promise(function(resolve , reject){
 promiseOne.then(function(){//this callback automatically receives a value
     console.log("Promise consumed!");
 })
+
+new Promise(function(resolve , reject){
+    setTimeout(function(){
+        console.log("Task 2 done!");
+        resolve();
+    },2000)
+}).then(function(){
+    console.log("Async 2 resolved!")
+})
