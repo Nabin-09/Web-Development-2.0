@@ -17,3 +17,13 @@ new Promise(function(resolve , reject){
 }).then(function(){
     console.log("Async 2 resolved!")
 })
+
+
+const promiseThree = new Promise(function(resolve , reject){
+    setTimeout(() => {
+       resolve( {username : "data" , email : "nunu@example,com"});
+    }, 2000);
+})
+promiseThree.then(function(user){
+    console.log(user)//passing values through sending parameters to resolve
+})
