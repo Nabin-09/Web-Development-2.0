@@ -38,7 +38,11 @@
         </div>
     </div>
     <script>
-        const apikey = "bae3d8a2441e4bd133f47ffa97bb2a90"
+        require('dotenv').config();
+        const apiKey = process.env.OPENWEATHERMAP_API_KEY;
+
+        const apikey = process.env.OPENWEATHERMAP_API_KEY;
+
         const apiURL = "https://api.openweathermap.org/data/2.5/weather?&q=units=metric&q="
 
         const searchBox = document.querySelector(".search input")
