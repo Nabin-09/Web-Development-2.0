@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" spellcheck="false">
+            <button><img src="/images/search-icon-2048x2048-cmujl7en.png" alt=""></button>
+        </div>
+        <div class="weather">
+            <img src="./images/1332316.png" class = "weather-icon" alt="">
+            <h1 class = "temp">22°C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.jpg" alt="">
+                    <div>
+                        <p class = "humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.jpg" alt="">
+                    <div>
+                        <p class = "wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const apikey = "bae3d8a2441e4bd133f47ffa97bb2a90"
+        const apiURL = "https://api.openweathermap.org/data/2.5/weather?&q=units=metric&q="
+
+        const searchBox = document.querySelector(".search input")
+        const searchBtn = document.querySelector(".search button")
+        async function checkWeather(city) {
+            const response = await fetch (apiURL + city+ `&appid = ${apikey}`);
+            var data = await response.json()
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+        }
+        searchBtn.addEventListener("click" , () =>{
+            checkWeather(searchBox.value)
+        })
+
+        checkWeather()
+    </script>
+</body>
+</html>
