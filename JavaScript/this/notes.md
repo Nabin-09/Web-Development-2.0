@@ -163,6 +163,47 @@ obj.x() // {}
 value of this over here is not the parent object but enclosing lexical context and hence gives `window` object.
 
 
+## this keyword inside nested functions 
+
+```js
+
+const obj = {
+    a : 10 ,
+    b : function (){
+        x = () => {
+            console.log(this);
+        }
+        x();
+    }
+}
+
+obj.b(); //{ a: 10, b: [Function: b] }
+```
+
+value of this is where the this is lexically enclosed and hence prints as if
+```js
+const obj  = {
+    a : 10,
+    x : function(){
+        console.log(this); //acts like this
+        const y = () => {
+            //originally here
+        }
+    }
+}
+```
+
+> **Arrow functions** dont proide their own this **binding**
+
+
+## Inside DOM
+
+```html
+<button onclick = "alert(this)">Click me</button>
+```
+
+when the button is `clicked` , it gives reference to the button element, hence it references to html element.
+
 
 
 

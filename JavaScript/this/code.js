@@ -28,11 +28,35 @@
 
 // student.printname.call(student2)
 //Is there any way I can use the printname fn of the student object to use it in student 2 
-const obj = {
-    a : 10,
-    x : ()=>{
-        console.log(this)
-    },
-}
-obj.x();// {}
+// const obj = {
+//     a : 10,
+//     x : ()=>{
+//         console.log(this)
+//     },
+// }
+// obj.x();// {}
 
+
+//this inside a nested function
+
+// const obj = {
+//     a : 10 ,
+//     b : function (){
+//         x = () => {
+//             console.log(this);
+//         }
+//         x();
+//     }
+// }
+
+// obj.b(); //{ a: 10, b: [Function: b] }
+
+const obj = {
+    name : 'Nabin',
+    b : function(){
+        console.log(this);
+    }
+
+};
+
+obj.b();
