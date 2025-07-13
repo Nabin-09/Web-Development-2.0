@@ -6,7 +6,14 @@ import MacContainer from './MacContainer';
 
 const App = () => {
   return (  
-    <div className='w-full h-screen'>
+    <div className='w-full h-screen font-[Poppins]'>
+      <div className="navbar line flex gap-10 py-10 absolute top-0 left-1/2 -translate-x-1/2 cursor-pointer">
+          {['iPhone' , 'iPad' , 'Contact Us' , 'Products' , 'Services'].map(e => 
+            <a href='' className='text-white font-[500] text-sm capitalize cursor-pointer'>
+              {e}
+            </a>
+          )}
+      </div>
       <div className='absolute text-white top-40 left-1/2 -translate-x-1/2 transform text-center font-["Poppins"]'>
         <h3 className='masked text-7xl tracking-tighter font-[700]'>Macbook Pro</h3>
         <h5 className='text-lg mt-2'>Oh so Pro!</h5>

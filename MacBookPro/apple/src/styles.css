@@ -55,3 +55,9 @@ html , body {
   opacity: 1;
   z-index: -1;
 }
+
+.line{
+    border-bottom: 1px solid #fff;
+    padding-bottom : 5px;
+    
+}
