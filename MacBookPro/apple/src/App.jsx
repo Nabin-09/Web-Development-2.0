@@ -6,7 +6,12 @@ import MacContainer from './MacContainer';
 
 const App = () => {
   return (  
-    <div>
+    <div className='w-full h-screen'>
+      <div className='absolute text-white top-32 left-1/2 -translate-x-1/2 font-["Helvetica_Now_Display"]'>
+        <h3 className='text-7xl tracking-tighter font-[700]'>Macbook Pro</h3>
+        <h5 className='text-center'>Oh so Pro!</h5>
+        <p className='text-center w-3/4 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic exercitationem a molestias.</p>
+      </div>
     <Canvas camera={{fov :12 , position : [0, -10 ,220]}}>
         <OrbitControls/>
         <Environment
